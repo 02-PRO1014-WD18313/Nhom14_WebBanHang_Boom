@@ -30,4 +30,45 @@
               <li><a href="index.php?act=listtk">Thống kê</a></li>
             </ul>
         </div>
+           <div class="tt">
+               <marquee>boom thương hiệu trà sữa</marquee>
+           </div>
+           <h2>Boom</h2>
+<p>Chào mừng đến với tiệm trà sữa của BOOM.</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="https://i.imgur.com/MyZfu1J.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://i.imgur.com/zv52vYA.jpg" style="width:100%">
+  <div class="text">quan ly</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="https://i.imgur.com/vjmPgaH.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+  
+  <div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="https://i.imgur.com/0X2P272.jpg" style="width:100%">
+  <div class="text">Chú thích cho ảnh 4</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
        </header>
