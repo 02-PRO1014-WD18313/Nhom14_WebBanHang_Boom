@@ -71,4 +71,5 @@
   <span class="dot"></span>
   <span class="dot"></span>
 </div>
+           <script src="js/main.js"></script>
        </header>
