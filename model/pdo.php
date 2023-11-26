@@ -4,7 +4,7 @@ function pdo_get_connection(){
     $username = "root";
     $password = "";
     
-        $conn = new PDO("mysql:host=$servername;dbname=duanmau", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=duanmot", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     
@@ -60,5 +60,35 @@ function pdo_query_one($sql){
         unset($conn);
     }
 }
+session_start();
+function check($data){
+  $data = htmlspecialchars($data);
+  $data = trim($data);
+  return $data;
+}
 pdo_get_connection();
+
+
+use PHPMailer\PHPMailer\PHPMailer;
+function sendPass($email, $username, $pass) {
+    require "PHPMailer/src/Exception.php";
+    require "PHPMailer/src/PHPMailer.php";
+    require "PHPMailer/src/SMTP.php";
+    $mail = new PHPMailer(true);
+    try {                             
+       
+        //Recipients
+        $mail->setFrom('dtashop@example.com', 'BOOM');
+        $mail->addAddress($email, $username);     //Add a recipient
+
+        //Content
+        $mail->isHTML(true);                                  
+        $mail->Subject = 'Nguoi dung quen mat khau';
+        $mail->Body    = 'Mau khau cua ban la: ' .$pass;
+
+        $mail->send();
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
 ?>
