@@ -4,7 +4,7 @@ function pdo_get_connection(){
     $username = "root";
     $password = "";
     
-        $conn = new PDO("mysql:host=$servername;dbname=duanmot", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=duanmau", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     
@@ -60,12 +60,5 @@ function pdo_query_one($sql){
         unset($conn);
     }
 }
-session_start();
-function check($data){
-  $data = htmlspecialchars($data);
-  $data = trim($data);
-  return $data;
-}
 pdo_get_connection();
-
 ?>
