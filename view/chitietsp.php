@@ -4,7 +4,6 @@ $thongbao = "";
     $id = $_GET['id'];
    $sp = loadsp($id);
    $spcl=spcungloai($id,$sp['iddanhmuc']);}
-   if(!isset($_SESSION['cart'])) $_SESSION['cart']=[];
    $img = $sp['img'];
    $name = $sp['name'];
    $price = $sp['gia'];

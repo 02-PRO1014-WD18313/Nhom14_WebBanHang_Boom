@@ -28,7 +28,7 @@
               <li><a href="index.php?act=addkh">Khách hàng</a></li>
               <li><a href="index.php?act=listbl">Bình luận</a></li>
               <li><a href="index.php?act=listtk">Thống kê</a></li>
-              <li><a href="index.php?act=dangxuat">Đăng xuất</a></li>
+              <li><a href="../model/logout.php">Đăng xuất</a></li>
             </ul>
         </div>
        </header>

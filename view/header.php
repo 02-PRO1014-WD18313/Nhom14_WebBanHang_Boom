@@ -99,7 +99,7 @@
                         <a class="text-white pl-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a class="text-white pl-3" href="">
+                        <a class="text-white pl-3" href="index.php?act=cart">
                             Giỏ hàng
                         </a>
                         
@@ -127,10 +127,10 @@
                         <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
                         <a href="about.html" class="nav-item nav-link">Gioi thiệu</a>
                         <div class="dropdown">
-                            <a href="product.html" class="nav-item nav-link">DANH MỤC</a>
+                            <a href="index.php?act=sanpham" class="nav-item nav-link">DANH MỤC</a>
                             <div class="dropdown-content">
                                 <?php foreach($listdm as $dm):?>
-                              <li><a href="index.php?act=danhmucsp&id=<?php echo $dm['iddanhmuc']?>"><?php echo $dm['tendanhmuc']?></a></li>
+                              <li><a href="index.php?act=sanpham&id=<?php echo $dm['iddanhmuc']?>"><?php echo $dm['tendanhmuc']?></a></li>
                               <?php endforeach ?>
                               
                               

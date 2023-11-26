@@ -9,8 +9,9 @@
                 if($password == $user['pass']){
                     $_SESSION['account'] = $account;
                     $_SESSION['password'] = $password; 
-                    header("location:index.php");}
-                    else{
+                    if($user['role']==1){header("location:admin/index.php");}
+                    else{header("location:index.php");}
+                }else{
                         $er = "Sai mật khẩu!";
                     }
             }else {

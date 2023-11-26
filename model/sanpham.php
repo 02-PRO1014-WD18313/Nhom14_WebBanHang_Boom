@@ -14,11 +14,11 @@ function loadall_key($keyw){
     $listsanpham=pdo_query($sql);
     return  $listsanpham;
 }
-function loadall_sanpham($iddm){
-    $sql="select * from sanpham where iddm = $iddm ";
-    $listsanpham=pdo_query($sql);
-    return  $listsanpham;
-}
+// function loadall_sanpham($iddm){
+//     $sql="select * from sanpham where iddm = $iddm ";
+//     $listsanpham=pdo_query($sql);
+//     return  $listsanpham;
+// }
 
 // 
 function load_ten_dm($iddm){
@@ -43,4 +43,21 @@ function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
     else
     $sql="update sanpham set iddm='".$iddm."', name='" .$tensp."', price='".$giasp."',mota='".$mota."'where id=".$id;
     pdo_execute($sql);
+}
+
+
+
+
+function loadall_sanpham($kyw, $iddm)
+{
+    $sql = "SELECT * FROM sanpham where 1";
+    if ($kyw != "") {
+        $sql .= " and name like '%" . $kyw . "%'";
+    }
+    if ($iddm > 0) {
+        $sql .= " and iddanhmuc = '" . $iddm . "'";
+    }
+    $sql .= " order by idsp desc";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
 }
