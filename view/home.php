@@ -1,3 +1,8 @@
+<?php
+    $sql="select * from sanpham order by idsp desc limit 0,5";
+    $listsp=pdo_query($sql);
+   
+?>
 <div class="container-fluid p-0 mb-5 pb-5">
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -300,56 +305,18 @@
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel product-carousel">
+                        <?php foreach($listsp as $sp):?>
                         <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">25k</h4>
+                                <h4 class="font-weight-bold text-white mb-0"><?php echo $sp['gia']?>đ</h4>
                             </div>
                             <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="img/trasua33.jpg" style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100" src="uploads/<?php echo $sp['img']?>" style="object-fit: cover;">
                             </div>
-                            <h5 class="font-weight-bold mb-4">Trà sữa matcha</h5>
-                            <a href=" index.php?act=ct&id=1" class="btn btn-sm btn-secondary">Mua ngay</a>
+                            <h5 class="font-weight-bold mb-4"><?php echo $sp['name']?></h5>
+                            <a href="index.php?act=ct&id=<?php echo $sp['idsp']?>" class="btn btn-sm btn-secondary">Mua ngay</a>
                         </div>
-                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">25k</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="img/trasua55.jpg" style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Trà sữa vị đào</h5>
-                            <a href="index.php?act=ct&id=1" class="btn btn-sm btn-secondary">Mua ngay</a>
-                        </div>
-                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">25k</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="img/trasua22.jpg" style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">trà sữa vị nho</h5>
-                            <a href="index.php?act=ct&id=1" class="btn btn-sm btn-secondary">Mua ngay</a>
-                        </div>
-                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">25k</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="img/trasua77.jpg" style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Trà sữa vị socola</h5>
-                            <a href="index.php?act=ct&id=1" class="btn btn-sm btn-secondary">Mua ngay</a>
-                        </div>
-                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">25k</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="img/product-5.jpg" style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Trà sữa vị bơ</h5>
-                            <a href="index.php?act=ct&id=idsp=1" class="btn btn-sm btn-secondary">Mua ngay</a>
-                        </div>
+                        <?php endforeach ?>
                     </div>
                 </div>
             </div>

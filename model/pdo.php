@@ -68,4 +68,27 @@ function check($data){
 }
 pdo_get_connection();
 
+
+use PHPMailer\PHPMailer\PHPMailer;
+function sendPass($email, $username, $pass) {
+    require "PHPMailer/src/Exception.php";
+    require "PHPMailer/src/PHPMailer.php";
+    require "PHPMailer/src/SMTP.php";
+    $mail = new PHPMailer(true);
+    try {                             
+       
+        //Recipients
+        $mail->setFrom('dtashop@example.com', 'BOOM');
+        $mail->addAddress($email, $username);     //Add a recipient
+
+        //Content
+        $mail->isHTML(true);                                  
+        $mail->Subject = 'Nguoi dung quen mat khau';
+        $mail->Body    = 'Mau khau cua ban la: ' .$pass;
+
+        $mail->send();
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
 ?>
