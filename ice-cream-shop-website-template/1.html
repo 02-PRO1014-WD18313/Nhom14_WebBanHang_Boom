@@ -1,82 +1,31 @@
-<!-- <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mockup - Trang Tạo Mới Sản Phẩm</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
+    <meta charset="utf-8">
+    <title>BOOM-CỬA HÀNG BÁN TRÀ SỮA UY TÍN</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link rel="stylesheet" href="css/log.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+    <!-- Favicon -->
+    <link href="ice-cream-shop-website-template/img/favicon.ico" rel="icon">
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    form {
-      display: flex;
-      flex-direction: column;
-    }
+    <!-- Libraries Stylesheet -->
+    <link href="ice-cream-shop-website-template/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="ice-cream-shop-website-template/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    label {
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    input[type="text"],
-    textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      margin-bottom: 15px;
-    }
-
-    input[type="submit"] {
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Tạo Mới Sản Phẩm</h1>
-    <form>
-      <label for="product-name">Tên Sản Phẩm:</label>
-      <input type="text" id="product-name" name="product-name" required>
-
-      <label for="product-description">Mô Tả:</label>
-      <textarea id="product-description" name="product-description" rows="4" required></textarea>
-
-      <label for="product-price">Giá:</label>
-      <input type="text" id="product-price" name="product-price" required>
-
-      <input type="submit" value="Tạo Mới">
-    </form>
-  </div>
-</body>
-
-</html> --><!DOCTYPE html>
-<html>
-  <head>
-  <style>
-  /* CSS */
-  .dropdown {
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="ice-cream-shop-website-template/css/style.css" rel="stylesheet">
+    <link href="../ice-cream-shop-website-template/css/style.css" rel="stylesheet">
+    <style>
+        .dropdown {
     position: relative;
     display: inline-block;
   }
@@ -93,19 +42,500 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  </style>
-  </head>
-  <body>
-  
-  <!-- HTML -->
-  <div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-      <a href="#">Liên kết 1</a>
-      <a href="#">Liên kết 2</a>
-      <a href="#">Liên kết 3</a>
+        .timkiem{
+            border-radius: 15px;
+            border: 1px solid white;
+           
+        }
+        .search{
+            border-radius: 15px;
+            border: 1px solid white;
+            background-color: white;
+            margin-left: 10px;
+        }
+        .search:hover{
+            background-color: rgb(253, 200, 217);
+        }
+        .btn{
+            background:pink;
+            color:green;
+        }
+        .forms{
+            display:flex;
+        }
+        
+        .heading_container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+          }
+
+          .heading_container h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            color:#f89cab;
+          }
+
+          .heading_container h2 span {
+            color: #f89cab;
+          }
+
+          .heading_container.heading_center {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            text-align: center;
+          }
+
+          /*header section*/
+          .shop_section .heading_container {
+            margin: 30px;
+          }
+          .shop_section .box {
+            background-color: #eeeeee;
+            position: relative;
+            padding: 10px;
+            margin-top: 25px;
+          }
+
+          .shop_section .box a {
+            color: #000000;
+          }
+
+          .shop_section .box .img-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 15px 30px;
+            height: 245px;
+          }
+          .shop_section .box .img-box img {
+            max-width: 100%;
+            max-height: 145px;
+          }
+
+          .shop_section .box .detail-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+          }
+
+          .shop_section .box .detail-box h6 span {
+            color: #db4f66;
+          }
+          .box>span{
+              color: red;
+              
+          }
+
+          .shop_section .box .new {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ffffff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            border-radius: 100%;
+            font-size: 15px;
+          }
+
+          .shop_section .btn-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin-top: 45px;
+          }
+
+          .shop_section .btn-box a {
+            display: inline-block;
+            padding: 10px 40px;
+            background-color: #f16179;
+            color: #ffffff;
+            border: 1px solid #f16179;
+            border-radius: 5px;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+          }
+
+          .shop_section .btn-box a:hover {
+            background-color: transparent;
+            color: #f16179;
+          }
+          /* end shop_section*/
+          /*# sourceMappingURL=style.css.map */
+    </style>
+</head>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary py-3 d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                       
+                        <a class="text-white px-3" href="">LIÊN HỆ NGAY</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white pl-3" href="">HỖ TRỢ</a>
+                        <div style="margin-left: 50px;">
+                        <form action="" class="forms">
+                            <input class="timkiem" type="text" placeholder="Tìm kiếm">
+                            <input class="search" type="submit" value="TÌM KIẾM NGAY">
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="text-white pl-3" href="">
+                            Giỏ hàng
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">B</span>OOM</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
+                        <a href="about.html" class="nav-item nav-link">Giới thiệu</a>
+                        <div class="dropdown">
+                            <a href="product.html" class="nav-item nav-link">Danh mục</a>
+                            <div class="dropdown-content">
+                              <a href="#">Trà sữa truyền thống </a>
+                              <a href="#">Trà sữa vị matcha</a>
+                              <a href="#">Trà sữa nóng</a>
+                            </div>
+                          </div>
+                    </div>
+                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">B</span>OOM</h1>
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="service.html" class="nav-item nav-link">tin tức</a>
+                        <a href="gallery.html" class="nav-item nav-link">Cửa hàng</a>
+                        <?php if(!isset($_SESSION['account'])) :?>
+                        <a href="index.php?act=dangnhap" class="nav-item nav-link">Đăng nhập</a>
+                        <?php endif ?>
+                        <?php if(isset($_SESSION['account'])) :?>
+                        <a href="model/logout.php" class="nav-item nav-link">Đăng xuất</a>
+                        <?php endif ?>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- end header section -->
+
   </div>
-  
-  </body>
-  </html>
+<!-- end hero area -->
+
+  <!-- shop section -->
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Sản phẩm của BOOM
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/trasua1.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà sữa trân châu đường đen
+                </h6>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>25.000 VND</b>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/trasua2.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà sữa vị nho
+                </h6>
+                
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>25.000 VND</b>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/trasua3.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà sữa vị matcha
+                </h6>
+                
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>26.000 VND</b>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/trasua4.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà sữa vị dâu
+                </h6>
+                
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>25.000 VND</b>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/trasua5.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà đào
+                </h6>
+                
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>25.000 VND</b>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/trasua6.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà sữa vị việt quất
+                </h6>
+                
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>25.000 VND</b>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/trasua7.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà sữa vị socola
+                </h6>
+                
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>25.000 VND</b>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="img/tramit.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  Trà mít
+                </h6>
+                
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+            <span>
+              Giá: <b>20.000 VND</b>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="">
+          View All Products
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end shop section -->
+
+  <!-- info section -->
+  <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+    <div class="container text-center py-5">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <a href="index.html" class="navbar-brand m-0">
+                    <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">B</span>OOM</h1>
+                </a>
+            </div>
+            <div class="col-12 mb-4">
+                <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-12 mt-2 mb-4">
+                <div class="row">
+                    <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                        <h5 class="font-weight-bold mb-2">LIÊN LẠC</h5>
+                        <p class="mb-2">123 Phương Canh , Nam Từ Liêm, Hà Nội</p>
+                        <p class="mb-0">+012 345 67890</p>
+                    </div>
+                    <div class="col-sm-6 text-center text-sm-left">
+                        <h5 class="font-weight-bold mb-2">Giờ mở cửa</h5>
+                        <p class="mb-2">cả tuần, 8h – 00h</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="ice-cream-shop-website-template/lib/easing/easing.min.js"></script>
+<script src="ice-cream-shop-website-template/lib/waypoints/waypoints.min.js"></script>
+<script src="ice-cream-shop-website-template/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="ice-cream-shop-website-template/lib/isotope/isotope.pkgd.min.js"></script>
+<script src="ice-cream-shop-website-template/lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="ice-cream-shop-website-template/mail/jqBootstrapValidation.min.js"></script>
+<script src="ice-cream-shop-website-template/mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="ice-cream-shop-website-template/js/main.js"></script>
+</body>
+<script src="js/demo.js"></script>
+</html>
