@@ -1,4 +1,3 @@
-
 <main class="bg_gray">
     <?php if($_SESSION['cart']==[] || !isset($_SESSION['cart'])) :?>
         <div class="thongbao">Giỏ hàng trống!</div>
@@ -105,4 +104,3 @@
 
         <?php endif ?>
         </main>
-30.0 

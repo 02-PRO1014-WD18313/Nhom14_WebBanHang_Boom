@@ -49,7 +49,7 @@ function loaduser1($acc){
     $user = pdo_query($sql);
     return $user;
 }function loaduser($acc){
-    $sql="select * from login where account = '$acc'";
+    $sql="select * from taikhoan where user = '$acc'";
     $user = pdo_query_one($sql);
     return $user;
 }
@@ -125,5 +125,10 @@ function spyeuthich(){
     $sql = "SELECT ma_hh,hinh,ten_hh FROM hang_hoa ORDER BY so_luot_xem DESC LIMIT 10";
     $spyt=pdo_query($sql);
     return $spyt;
+}
+function loadha($id){
+    $sql = "SELECT * FROM images WHERE idsp = $id";
+    $row=pdo_query($sql);
+    return $row;
 }
 ?>

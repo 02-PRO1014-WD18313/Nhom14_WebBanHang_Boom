@@ -1,7 +1,7 @@
-<div class="row2"> 
-         <div class="row2 font_title"> 
-          <h1>THÊM MỚI KHÁCH HÀNG</h1> 
-         </div> 
+<div class="row2">
+         <div class="row2 font_title">
+          <h1>THÊM MỚI KHÁCH HÀNG</h1>
+         </div>
          <div class="row2 form_content ">
           <form action="index.php?act=addkh" method="POST">
            <div class="row2 mb10">
@@ -11,7 +11,7 @@
            <div class="row2 mb10">
            <label>Mật khẩu</label> <br>
             <input class="row2 mb10" type="text" name="pass" placeholder="nhập vào mật khẩu">
-           </div>   
+           </div>
            <div class="row2 mb10">
             <label>Số điện thoại</label> <br>
             <input class="row2 mb10" type="text" name="phone" placeholder="nhập vào số điện thoại">
@@ -31,4 +31,4 @@
          <?php
         if(isset($thongbao) && $thongbao!="") echo $thongbao;      
          ?>
-</div>
+        </div>
