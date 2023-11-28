@@ -1,3 +1,4 @@
+
 <main class="bg_gray">
     <?php if($_SESSION['cart']==[] || !isset($_SESSION['cart'])) :?>
         <div class="thongbao">Giỏ hàng trống!</div>
@@ -44,7 +45,7 @@
                             </div>
                             <div class="girdcart">
                                 <span class="item_cart"><?php echo $cart[2] ?></span>
-                                <span class="item_cart">Size : <?php echo $cart[4] ?></span>
+                               
                             </div>
                         </td>
                         <td class="hiv">
@@ -54,21 +55,21 @@
                         </td>
                         <td>
                             <div class="numbers-row">
-                                <input type="text" value="<?php echo $cart[5] ?>"  class="qty2 sl0" name="quantity_1">
+                                <input type="text" value="<?php echo $cart[4] ?>"  class="qty2 sl0" name="quantity_1">
                                 <div class="inc button_inc" id="tang0" onclick="tang0(<?php echo $key ?>)">+</div>
                                 <div class="dec button_inc" id="giam0" onclick="giam0(<?php echo $key ?>)">-</div>
                             </div>
                         </td>
                         <td>
-                            <div class="cartPrice price_0" id="" ><?php echo number_format($cart[3]*$cart[5]) ?></div>
+                            <div class="cartPrice price_0" id="" ><?php echo number_format($cart[3]*$cart[4]) ?></div>
                         </td>
                         <td class="options">
                            <a href="model/deletecart.php?id=<?php echo $key ?>"><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                        <?php
-                        $tong = $tong + $cart[3]*$cart[5];
-                        $so = $so+ $cart[5];
+                        $tong = $tong + $cart[3]*$cart[4];
+                        $so = $so+ $cart[4];
                        ?>
                     <?php endforeach ?>
                     
