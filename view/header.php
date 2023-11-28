@@ -135,14 +135,23 @@
                               
                               
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">B</span>OOM</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
                         <a href="service.html" class="nav-item nav-link">tin tức</a>
-                        <a href="gallery.html" class="nav-item nav-link">Cửa hàng</a>
+                        <div class="dropdown">
+                            <a href="index.php?act=sanpham" class="nav-item nav-link">Cửa hàng</a>
+                            <div class="dropdown-content">
+                                <?php foreach($listsanpham as $sp):?>
+                              <li><a href="index.php?act=listsanpham&id=<?php echo $sp['idsp']?>"><?php echo $sp['tensp']?></a></li>
+                              <?php endforeach ?>
+                              
+                              
+                            </div>
+                        </div>
                         <?php if(!isset($_SESSION['account'])) :?>
                         <a href="index.php?act=dangnhap" class="nav-item nav-link">Đăng nhập</a>
                         <?php endif ?>
