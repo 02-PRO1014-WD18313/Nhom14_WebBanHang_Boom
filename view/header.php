@@ -127,14 +127,14 @@
                         <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
                         <a href="about.html" class="nav-item nav-link">Gioi thiệu</a>
                         <div class="dropdown">
-                            <a href="index.php?act=sanpham" class="nav-item nav-link">DANH MỤC</a>
-                            <div class="dropdown-content">
+                            <a href="" class="nav-item nav-link">DANH MỤC</a>
+                            <!-- <div class="dropdown-content">
                                 <?php foreach($listdm as $dm):?>
                               <li><a href="index.php?act=sanpham&id=<?php echo $dm['iddanhmuc']?>"><?php echo $dm['tendanhmuc']?></a></li>
                               <?php endforeach ?>
                               
                               
-                            </div>
+                            </div> -->
                           </div>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
@@ -142,7 +142,7 @@
                     </a>
                     <div class="navbar-nav mr-auto py-0">
                         <a href="service.html" class="nav-item nav-link">tin tức</a>
-                        <a href="gallery.html" class="nav-item nav-link">Cửa hàng</a>
+                        <a href="index.php?act=sanpham" class="nav-item nav-link">Cửa hàng</a>
                         <?php if(!isset($_SESSION['account'])) :?>
                         <a href="index.php?act=dangnhap" class="nav-item nav-link">Đăng nhập</a>
                         <?php endif ?>
