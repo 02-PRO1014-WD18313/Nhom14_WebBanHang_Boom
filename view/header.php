@@ -125,9 +125,9 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
-                        <a href="about.html" class="nav-item nav-link">Gioi thiệu</a>
+                        <a href="about.html" class="nav-item nav-link">Giới thiệu</a>
                         <div class="dropdown">
-                            <a href="index.php?act=sanpham" class="nav-item nav-link">DANH MỤC</a>
+                            <a href="" class="nav-item nav-link">Danh mục</a>
                             <div class="dropdown-content">
                                 <?php foreach($listdm as $dm):?>
                               <li><a href="index.php?act=sanpham&id=<?php echo $dm['iddanhmuc']?>"><?php echo $dm['tendanhmuc']?></a></li>
@@ -141,16 +141,16 @@
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">B</span>OOM</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="service.html" class="nav-item nav-link">tin tức</a>
+                        <a href="service.html" class="nav-item nav-link">Tin tức</a>
                         <div class="dropdown">
                             <a href="index.php?act=sanpham" class="nav-item nav-link">Cửa hàng</a>
-                            <div class="dropdown-content">
+                            <!-- <div class="dropdown-content">
                                 <?php foreach($listsanpham as $sp):?>
                               <li><a href="index.php?act=listsanpham&id=<?php echo $sp['idsp']?>"><?php echo $sp['tensp']?></a></li>
                               <?php endforeach ?>
                               
                               
-                            </div>
+                            </div> -->
                         </div>
                         <?php if(!isset($_SESSION['account'])) :?>
                         <a href="index.php?act=dangnhap" class="nav-item nav-link">Đăng nhập</a>
