@@ -9,25 +9,22 @@ $thongbao = "";
    $price = $sp['gia'];
   if(isset($_POST['addcart'])){
     $sl = $_POST['sl'];
-    if(empty($_POST['size'])){
-      $thongbao = "Chưa chọn size!";
-    }else{
-        $size = $_POST['size'];
+    
     $i = 0;$check = 0;
     foreach($_SESSION['cart'] as $cart){
-      if($cart[0]==$id && $cart[4]==$size){
-        $sl = $sl + $cart[5];
+      if($cart[0]==$id){
+        $sl = $sl + $cart[4];
         $check = 1;
-        $_SESSION['cart'][$i][5] = $sl;
+        $_SESSION['cart'][$i][4] = $sl;
       }$i++;
     }
     if($check==0){
-    $cart = [$id,$img,$name,$price,$size,$sl];
+    $cart = [$id,$img,$name,$price,$sl];
   array_push($_SESSION['cart'],$cart);
   }
   header("location:index.php?act=cart");
  }
-  }
+  
 ?>
 <div class="offset-md-1">
         <div class="container-fuild">
@@ -47,8 +44,8 @@ $thongbao = "";
                 </li>
                 <li>
                   Đơn giá:
-                  <span class="line-through"><?php echo $sp['gia']?> VNĐ</span>
-                  <span class="badge bg-danger" style="color: white;">25.000 VNĐ</span>
+                  <span class="line-through"><?php echo number_format($sp['gia'])?> VNĐ</span>
+                  <!-- <span class="badge bg-danger" style="color: white;">25.000 VNĐ</span> -->
                 </li>
                 <li>Nhà cung cấp: BOOM</li>
                 
@@ -60,10 +57,10 @@ $thongbao = "";
                     <input name="size" type="radio" value="l" />L
                      <span><?php echo $thongbao ?></span>
                 </li>
-                <li>
+                <!-- <li>
                   Giảm giá:
                   <span class="badge bg-danger" style="color: white;">5%</span>
-                </li>
+                </li> -->
               </ul>
               <button class="btn btn-success" type="button" onclick="giam()">-</button>
             <input type="number" id="sl" name="sl" class="btn" value="1" min="1" >

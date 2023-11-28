@@ -6,13 +6,30 @@
 <?php require "model/danhmuc.php" ?>
 <?php
 if(!isset($_SESSION['cart'])) $_SESSION['cart']=[];
-//  if($_SERVER['REQUEST_METHOD'] == "POST"){
-//   if(isset($_POST['key']) ){
-//   $key = $_POST['key'];
-//   $_SESSION['key'] = $key;
-//   header("location:index.php?act=timkiem");
-//  }
-// }
+
+
+if(isset($_POST['addcarts'])){
+  $id = $_POST['id'];
+  $sp = loadsp($id);
+  $spcl=spcungloai($id,$sp['iddanhmuc']);
+  $img = $sp['img'];
+  $name = $sp['name'];
+  $price = $sp['gia'];
+  $sl = 1;
+  $i = 0;$check = 0;
+  foreach($_SESSION['cart'] as $cart){
+    if($cart[0]==$id ){
+      $sl = $sl + $cart[4];
+      $check = 1;
+      $_SESSION['cart'][$i][4] = $sl;
+    }$i++;
+  }
+  if($check==0){
+  $cart = [$id,$img,$name,$price,$sl];
+array_push($_SESSION['cart'],$cart);
+
+}
+header("location:index.php?act=cart");}
 include "view/header.php";
     if(isset($_GET['act']) && $_GET['act']){
       $act = $_GET['act'];

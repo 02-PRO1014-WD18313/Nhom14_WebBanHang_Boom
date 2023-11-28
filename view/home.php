@@ -311,10 +311,13 @@
                                 <h4 class="font-weight-bold text-white mb-0"><?php echo $sp['gia']?>đ</h4>
                             </div>
                             <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="uploads/<?php echo $sp['img']?>" style="object-fit: cover;">
+                                <a href="index.php?act=ct&id=<?php echo $sp['idsp'] ?>"><img class="rounded-circle w-100 h-100" src="uploads/<?php echo $sp['img']?>" style="object-fit: cover;"></a>
                             </div>
                             <h5 class="font-weight-bold mb-4"><?php echo $sp['name']?></h5>
-                            <a href="index.php?act=ct&id=<?php echo $sp['idsp']?>" class="btn btn-sm btn-secondary">Mua ngay</a>
+                            <form action="" method="post">
+                                <input type="hidden" name="id" value="<?php echo $sp['idsp'] ?>">
+                            <button type="submit" name="addcarts" class="btn btn-sm btn-secondary">Mua ngay</button>
+                            </form>
                         </div>
                         <?php endforeach ?>
                     </div>
